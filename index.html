@@ -5,9 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Meal Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+        </li>
+      </ul>
+
+    <div class="container">
+
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="city-name-input" type="text" class="form-control"
+                    placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button id="submit-btn" type="button" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="meals">
+
+
+    </div>
     
 </body>
+
+<script src="app.js"></script>
 </html>
