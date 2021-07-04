@@ -35,11 +35,11 @@ const displayMeals = categories =>{
 
 
 
-
+        categoryDiv.className = 'Category';
 
         const categoriesInfo = `
             <h1>${categoriesValue.strCategory}</h1>
-             <p>${categoriesValue.strCategoryDescription}</p>
+            
              <img src="${categoriesValue.strCategoryThumb}"></img>
            
            `
@@ -52,24 +52,24 @@ const displayMeals = categories =>{
 }
 
 
-//search Button
+// search Button
 
-// document.getElementById('submit-btn').addEventListener('click' , function () {
-//     var mealName = document.getElementById('meal-name-input').value;
-//     console.log(mealName);
+document.getElementById('submit-btn').addEventListener('click' , function () {
+    var mealName = document.getElementById('meal-name-input').value;
+    console.log(mealName);
 
 
-//     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`;
-//     console.log(url);
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`;
+    console.log(url);
 
-//     fetch(url)
-//         .then(res => res.json())
-//         .then(data => {
-//             var MealDetails = data.meals[0];
-//             document.getElementById('meal-name').innerText = MealDetails.strMeal;
-//             document.getElementById('meal-img').src = MealDetails.strMealThumb;            
-//             console.log(strMealThumb);})
-// })
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            var MealDetails = data.meals[0];
+            document.getElementById('meal-name').innerText = MealDetails.strMeal;
+            document.getElementById('meal-img').src = MealDetails.strMealThumb;            
+            console.log(strMealThumb);})
+})
 
 
 

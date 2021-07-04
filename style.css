@@ -1,0 +1,21 @@
+.Category{
+
+    border: 1px solid goldenrod;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.Category img{
+
+    width: 200px;
+
+}
+
+#categories-chart{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
