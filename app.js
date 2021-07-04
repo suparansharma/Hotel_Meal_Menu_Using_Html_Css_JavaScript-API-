@@ -36,14 +36,21 @@
 
 fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
 .then(res => res.json())
-.then(data => displayMeals(data))
+.then(data => displayCategoriesMeals(data))
 
 
-function displayMeals(categories){
+function displayCategoriesMeals(categories){
 
-const meal = categories.categories;
+const mealItem = categories.categories;
+const div = document.getElementById('categories-chart');
   
-meal.map(categorie =>console.log(categorie));
+mealItem.map(categorie =>{
+
+    const h3 = document.createElement('h3');
+    h3.innerText =  categorie.strCategory;
+    div.appendChild(h3);
+    console.log(categorie.strCategory);
+});
 //console.log(meal);
 
 }
