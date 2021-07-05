@@ -8,7 +8,7 @@ const displayMeals = categories =>{
 
     const categoriesItem = categories.categories;
     console.log(categoriesItem);
-    const categoriesDiv = document.getElementById('categories-chart');
+    const categoriesDiv = document.getElementById('categoriesChart');
     for (let i = 0; i < categoriesItem.length; i++) {
         const categoriesValue =categoriesItem[i];
 
@@ -67,10 +67,28 @@ document.getElementById('submit-btn').addEventListener('click' , function () {
         .then(data => {
             var MealDetails = data.meals[0];
             document.getElementById('meal-name').innerText = MealDetails.strMeal;
-            document.getElementById('meal-img').src = MealDetails.strMealThumb;            
+            document.getElementById('meal-img').src = MealDetails.strMealThumb; 
+            categoriesChart.style.display = "none";
+            meals.style.display = "block";
+            
+            
+            showDetailsMeal();
             console.log(strMealThumb);})
 })
 
+function showDetailsMeal(){
+
+    document.getElementById('meals').addEventListener('click' , function () {
+
+        meals.style.display = "none";
+
+        document.getElementById('meal-name').innerText = MealDetails.strMeal;
+        document.getElementById('meal-img').src = MealDetails.strMealThumb; 
+
+    })
+
+
+}
 
 
 
@@ -82,7 +100,7 @@ document.getElementById('submit-btn').addEventListener('click' , function () {
 // function displayCategoriesMeals(categories) {
 
 //     const mealItem = categories.categories;
-//     const div = document.getElementById('categories-chart');
+//     const div = document.getElementById('categoriesChart');
 
 //     mealItem.map(categorie => {
 
