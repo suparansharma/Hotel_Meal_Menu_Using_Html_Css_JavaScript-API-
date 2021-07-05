@@ -27,9 +27,9 @@
     padding: 20px;
     text-align: center;
     width: 400px;
-
+    margin-left: 400px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     /* grid-gap: 30px;
     text-align: center; */
     
@@ -41,4 +41,24 @@
 
     width: 300px;
     text-align: center;
+}
+
+.mealAboutClass{
+
+    border: 1px solid goldenrod;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 400px;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+.mealAboutClass img{
+    width: 400px;
+    text-align: center;
+
 }

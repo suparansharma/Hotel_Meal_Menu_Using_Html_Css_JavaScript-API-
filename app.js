@@ -14,39 +14,20 @@ const displayMeals = categories =>{
 
         const categoryDiv  = document.createElement('div');
 
-        //console.log(categoriesValue.strCategory);
-
-        
-
-        // const h3 = document.createElement('h3');
-        // h3.innerText =  categoriesValue.strCategory;
-        // categoriesDiv.appendChild(h3);
-
-
-        // const p = document.createElement('p');
-        // p.innerText =  categoriesValue.strCategoryDescription;
-        // categoriesDiv.appendChild(p);
-
-
-        // const images = document.getElementById('categories-image');
-        // images.src =  categoriesValue.strCategoryThumb;
-        
-
-
-
 
         categoryDiv.className = 'Category';
 
+
         const categoriesInfo = `
             <h1>${categoriesValue.strCategory}</h1>
-            
              <img src="${categoriesValue.strCategoryThumb}"></img>
            
            `
+
            categoryDiv.innerHTML = categoriesInfo;
            categoriesDiv.appendChild(categoryDiv);
 
-        //    <img src="${categoriesValue.strCategoryThumb}"></img>
+       
 
     }
 }
@@ -70,25 +51,116 @@ document.getElementById('submit-btn').addEventListener('click' , function () {
             document.getElementById('meal-img').src = MealDetails.strMealThumb; 
             categoriesChart.style.display = "none";
             meals.style.display = "block";
+
+
+
+            document.getElementById('meals').addEventListener('click' , function () {
+
+                meals.style.display = "none";
+                mealAbout.style.display = "block";
+        
+                // document.getElementById('meal-name').innerText = MealDetails.strMeal;
+                // document.getElementById('meal-img').src = MealDetails.strMealThumb; 
+        
+                const mealAboutFirstDiv  = document.getElementById('mealAbout');
+                const mealAboutDiv  = document.createElement('div');
+                
+                mealAboutDiv.className = 'mealAboutClass';
+        
+                const  mealAboutInfo = `
+                    <h1>${MealDetails.strMeal}</h1>
+                     <img src="${MealDetails.strMealThumb}"></img>
+                     <h4>${MealDetails.strCategory}</h4>
+                     <h4>${MealDetails.strArea}</h4>
+                     <h4>${MealDetails.strIngredient1}</h4>
+                     <h4>${MealDetails.strIngredient3}</h4>
+                     <h4>${MealDetails.strIngredient4}</h4>
+                     <h4>${MealDetails.strIngredient5}</h4>
+                     <h4>${MealDetails.strIngredient6}</h4>
+                     <h4>${MealDetails.strIngredient7}</h4>
+                     <h4>${MealDetails.strIngredient8}</h4>
+                     <h4>${MealDetails.strMeasure1}</h4>
+                     <h4>${MealDetails.strMeasure2}</h4>
+                     <h4>${MealDetails.strMeasure3}</h4>
+                     <h4>${MealDetails.strMeasure4}</h4>
+                     <h4>${MealDetails.strMeasure5}</h4>
+                     <h4>${MealDetails.strMeasure6}</h4>
+                     <h4>${MealDetails.strMeasure7}</h4>
+                     <h4>${MealDetails.strMeasure8}</h4>
+                     
+                   
+                   `
+                   mealAboutDiv.innerHTML =  mealAboutInfo;
+                   mealAboutFirstDiv.appendChild(mealAboutDiv);
+        
+            })
             
             
             showDetailsMeal();
-            console.log(strMealThumb);})
+           // console.log(strMealThumb);
+        })
 })
 
 function showDetailsMeal(){
 
-    document.getElementById('meals').addEventListener('click' , function () {
 
-        meals.style.display = "none";
-
-        document.getElementById('meal-name').innerText = MealDetails.strMeal;
-        document.getElementById('meal-img').src = MealDetails.strMealThumb; 
-
-    })
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
